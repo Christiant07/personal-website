@@ -15,7 +15,7 @@ export default function HomeP() {
 
             <h2>About</h2>
             <div className="aboutMe">
-                <p>Im a person who enjoys trying new drinks. I enjoy coffee, tea, boba, matcha only if its over powered by another flavor like butter cookie so not mathca lol. But, its not all aboout drinks. I also like to run when I can and play soccer or jsut be oustide and enjoy nature...</p>
+                <h3> I'm a person who loves trying new drinks-from coffee, tea, and boba to matcha (as long as it's paired with a fun flavor like butter cookie, without that its lwk mid). I also enjoy soccer, running, hiking, and spending time in nature. One of my favorite foods is tacos from Tacos Los Tres Reyes, especially with some spicy sauce and an agua de horchata to cool down. I've grown up working in my family's Mexican cuisine business, which has been a big part of my life. Beyond that, I enjoy computer science and have had a lot of fun building my personal website. </h3>
                 <img src = "https://zfkwhyiovawoxvgxvfbv.supabase.co/storage/v1/object/public/images/IMG_7466.jpeg"alt = "Photo of me" width = {250} height = {250}/>
             </div>
         </main>

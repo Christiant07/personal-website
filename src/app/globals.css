@@ -30,7 +30,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: solid black;
+    border: solid black 5px;
     border-radius: 20px;
     max-width: 500px;
     width: 90%;
@@ -41,38 +41,61 @@ body {
     display: flex;
     align-items: center;
     justify-content:space-around;
+    border: solid black 5px;
+    gap: 5%;
+    border-radius: 20px;
+    padding: 2%;
 }
 
 .navRow {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    gap: 20%;
+    gap: 10%;
+    padding: 2%;;
 }
 
 .skills {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    border: black solid ;
+    border: black solid 5px;
     border-radius: 20px;
+    gap: 2%;
 }
 
 .experience {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 10%;
+    padding: 5%;
     border: solid black 5px;
     border-radius: 20px;
-
+    margin: 0 auto;
 }
 
 .contactLinks {
     display: flex;
     align-items: center;
     justify-content: space-around;
+    border: solid black 5px;
+    border-radius: 20px;
+    padding: 2%;
 }
 
 .skillsUnderline {
     border-bottom: black solid;
+}
+
+img {
+    max-width: 80%;
+    height: auto;
+    margin: 0 auto;
+    border-radius: 6px
+}
+.form {
+    border: solid black 5px;
+    border-radius: 20px;
+    padding: 2%;
 }
