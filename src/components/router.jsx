@@ -18,7 +18,7 @@ export default function Routers() {
           <Route path = "/contact" element = {<Contact />} />
         </Routes>
       </main>
-      <Nav />
+      <footer><Nav /></footer>
     </BrowserRouter>
   );
 }
