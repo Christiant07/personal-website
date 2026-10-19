@@ -1,4 +1,4 @@
-# Personal Website — Christian Tomas OCampo (CTO)
+# Personal Website — Christian Tomas Ocampo (CTO)
 
 A personal portfolio website built with **Next.js** and **React Router**, showcasing my projects, experience, and contact information.
 
