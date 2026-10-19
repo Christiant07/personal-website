@@ -1,13 +1,12 @@
-# Personal Website — Christian Tomas OCampo (CTO)
+# Personal Website - Christian Tomas Ocampo (CTO)
 
-A personal portfolio website built with **Next.js** and **React Router**, showcasing my projects, experience, and contact information.
+A personal portfolio website built with **Next.js**, showcasing my projects, experience, and contact information.
 
 ## Tech Stack
 
-- **Framework**: Next.js 14
-- **Routing**: React Router v6 (client-side, via `dynamic` import with `ssr: false`)
-- **Styling**: Global CSS with custom design system
-- **Image Storage**: Supabase Storage
+- **Framework**: Next.js 16 (App Router, file-based routing)
+- **Styling**: Global CSS with a token-based design system (warm cream & brown palette, DM Serif Display + DM Sans via `next/font`), light and dark themes
+- **Image Storage**: Static files in `public/images/` (deployed with the site)
 - **Form Handling**: Formspree
 - **Language**: JavaScript / JSX
 
@@ -15,44 +14,34 @@ A personal portfolio website built with **Next.js** and **React Router**, showca
 
 ```
 personal-website/
-├── app/
-│   ├── layout.js          # Root layout, global metadata
-│   ├── page.js            # Entry point — loads Router dynamically
-│   └── globals.css        # All styles
-├── components/
-│   ├── Header.jsx         # Site header with logo + nav
-│   ├── Nav.jsx            # Navigation links + resume download
-│   └── router.jsx         # BrowserRouter setup, route definitions
-├── pages/
-│   ├── HomeP.jsx          # Home page
-│   ├── Experience.jsx     # Skills, projects, and work experience
-│   └── Contact.jsx        # Contact links and email form
+├── src/
+│   ├── app/
+│   │   ├── layout.jsx             # Root layout: fonts, metadata, header/footer
+│   │   ├── page.jsx               # Home (hero + about)
+│   │   ├── experience/page.jsx    # Skills, projects, and work
+│   │   ├── contact/page.jsx       # Contact links + form
+│   │   └── globals.css            # Design tokens + all styles
+│   └── components/
+│       ├── Header.jsx             # Sticky nav, active links, mobile hamburger
+│       ├── Footer.jsx             # Footer nav
+│       └── LoadingScreen.jsx      # Once-per-session branded intro
 └── public/
-    └── Resume-CTO.pdf     # Downloadable resume
+    ├── images/                    # Site images (see images/README.md)
+    └── Christian-Tomas-Ocampo-Resume.pdf
 ```
 
-## Pages
+## Features
 
-### Home
-Introduction section with name display and a brief about me blurb with photo.
-
-### Experience
-- **Skills & Tools**: Java, Python, SQL, HTML/CSS, JavaScript, React, Next.js, Supabase, GitHub
-- **Projects**:
-  - *NextFor Autism* — Full-stack mentorship platform for students with autism and their mentors, featuring dashboards, weekly content, a matching system, and admin tooling
-  - *Ants vs SomeBees* — Tower defense game inspired by Plants vs. Zombies, built with object-oriented programming
-- **Work**: BGCSV Code + Create STEM Program Specialist — taught robotics, animation, and coding workshops to students at Boys & Girls Clubs of Silicon Valley
-
-### Contact
-Email, LinkedIn, GitHub links plus a contact form powered by Formspree.
+- Real routes for every page - `/experience` and `/contact` work on direct visit and refresh
+- Once-per-session loading screen (skipped for reduced-motion users)
+- Hover tooltips on skill chips, hover lift on cards, animated nav underline
+- Fully responsive: hamburger menu and stacked cards on mobile
+- Automatic dark mode matching the warm palette
 
 ## Getting Started
 
 ```bash
-# Install dependencies
 npm install
-
-# Run development server
 npm run dev
 ```
 
@@ -60,9 +49,8 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 
 ## Notes
 
-- React Router is loaded client-side only via Next.js `dynamic()` to avoid SSR conflicts with `BrowserRouter`
-- Resume is served as a static file from `/public` and triggers a download via the nav
-- Images are hosted on Supabase Storage
+- Images live in `public/images/`; a few placeholders need replacing with the originals (see `public/images/README.md`)
+- Resume is served as a static file from `/public` and downloads via the nav button
 
 ## Author
 
